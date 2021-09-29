@@ -50,25 +50,18 @@ a {
 }
 
 .header {
-  position: sticky;
-  inset-block-start: -45px;
+  /* position: sticky;
+  inset-block-start: -45px; */
 }
 
 .header-content {
-  position: relative;
-  inset-block-start: 65px;
+  padding-inline: 20px;
 }
 
 header {
   font-size: 14px;
   color: var(--white);
-  position: absolute;
-  /* top bottom left right*/
-  inset-block-start: 0;
-  /* inset-block-end: ; */
-  inset-inline-start: -208px;
-  /* inset-inline-end: ; */
-  inline-size: 188px;
+  margin-block-start: 20px;
 }
 
 header li {
@@ -90,9 +83,9 @@ nav details summary {
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 40px;
   /* font-weight: normal; */
-  margin-block-start: 64px;
+  margin-block-start: 20px;
   margin-block-end: 16px;
   /* font-size: 3.75em; */
 }
@@ -129,7 +122,7 @@ p {
 
 .hero {
   background: linear-gradient(96.07deg, #314755 30.63%, #26a0da 102.18%);
-  height: 350px;
+  block-size: 50px;
 }
 
 .section-content img {
@@ -192,4 +185,36 @@ blockquote p {
 
 .main-content {
   padding-inline: 16px;
+}
+
+@media screen and (min-width: 1366px) {
+  .hero {
+    block-size: 350px;
+  }
+
+  .header {
+    position: sticky;
+    inset-block-start: -45px;
+  }
+
+  .header-content {
+    position: relative;
+    inset-block-start: 65px;
+    padding-inline: 0;
+  }
+
+  header {
+    position: absolute;
+    /* top bottom left right*/
+    inset-block-start: 0;
+    /* inset-block-end: ; */
+    inset-inline-start: -208px;
+    /* inset-inline-end: ; */
+    inline-size: 188px;
+  }
+
+  h1 {
+    font-size: 60px;
+    margin-block-start: 64px;
+  }
 }
